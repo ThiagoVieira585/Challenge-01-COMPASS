@@ -1,0 +1,22 @@
+{
+  "name": "challenger-01",
+  "version": "1.0.0",
+  "description": "Challenger 01",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThiagoVieira585/Challenge-01-COMPASS.git"
+  },
+  "author": "Wermerson Thiago",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThiagoVieira585/Challenge-01-COMPASS/issues"
+  },
+  "homepage": "https://github.com/ThiagoVieira585/Challenge-01-COMPASS#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
