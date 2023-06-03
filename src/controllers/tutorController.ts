@@ -26,6 +26,42 @@ export const createTutor = (req: Request, res: Response) =>{
     saveTutorData(tutors);
     return res.status(201).json(newTutor);
 };
+export const updateTutor = (req: Request, res: Response) => {
+  const { id } = req.params;
+  const updatedTutor = req.body;
+
+  const tutors = readTutorData();
+  const tutor = tutors.find((tutor: any) => tutor.id === parseInt(id));
+
+  if (!tutor) {
+    return res.status(404).json({ error: 'Tutor not found' });
+  }
+
+  // Atualize as propriedades do tutor com base nos dados fornecidos
+  Object.assign(tutor, updatedTutor);
+  saveTutorData(tutors);
+
+  return res.json(tutor);
+};
+export const deleteTutor = (req: Request, res: Response) => {
+  const { id } = req.params;
+
+  const tutors = readTutorData();
+  const index = tutors.findIndex((tutor: any) => tutor.id === parseInt(id));
+
+  if (index === -1) {
+    return res.status(404).json({ error: 'Tutor not found' });
+  }
+
+  // Remova o tutor do array de tutores
+  const deletedTutor = tutors.splice(index, 1)[0];
+  saveTutorData(tutors);
+
+  return res.json(deletedTutor);
+};
+
+
+
 
 
 
