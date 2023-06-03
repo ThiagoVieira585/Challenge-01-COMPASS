@@ -6,12 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const tutorController_1 = require("../controllers/tutorController");
 const router = express_1.default.Router();
+router.use(express_1.default.json());
 router.get('/tutor', tutorController_1.getAllTutors, (req, res) => {
-    const tutors = tutorController_1.getAllTutors;
-    res.json(tutors);
 });
-router.post('/tutor', (req, res) => {
-    res.json({ message: 'POST /tutor' });
+router.post('/tutor', tutorController_1.createTutor, (req, res) => {
 });
 router.put('/tutor/:id', (req, res) => {
     res.json({ message: 'PUT /tutor/:id' });
