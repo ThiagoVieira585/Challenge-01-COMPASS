@@ -1,13 +1,17 @@
 import { Request, Response } from 'express';
 import express from 'express';
+import { getAllTutors } from '../controllers/tutorController';
 
 const router = express.Router();
 
-router.get('/tutor', (req: Request, res: Response) => {
-  res.json({ message: 'GET /tutor' });
+router.get('/tutor', getAllTutors, (req: Request, res: Response) => {
+  const tutors = getAllTutors;
+  res.json(tutors);
+
 });
 
 router.post('/tutor', (req: Request, res: Response) => {
+  
   res.json({ message: 'POST /tutor' });
 });
 
