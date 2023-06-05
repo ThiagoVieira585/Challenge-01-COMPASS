@@ -6,7 +6,16 @@
     "email": "xico.butico@compasso.com",
     "date_of_birth": "2000-00-00 00:00",
     "zip_code": "63540000",
-    "pets": []
+    "pets": [
+      {
+        "id": 1,
+        "name": "Manel",
+        "species": "Elefante",
+        "carry": "p",
+        "weight": 15,
+        "date_of_birth": "2019-07-05 14:16"
+      }
+    ]
   },
   {
     "id": 2,
@@ -17,20 +26,12 @@
     "zip_code": "63540000",
     "pets": [
       {
-        "id": 2,
-        "name": "Zé do leite",
-        "species": "bird",
+        "id": 1,
+        "name": "Bento",
+        "species": "Abelha",
         "carry": "p",
-        "weight": 1,
+        "weight": 15,
         "date_of_birth": "2019-07-05 14:16"
-      },
-      {
-        "name": "Xicu cunha",
-        "species": "human",
-        "carry": "c",
-        "weight": 100,
-        "date_of_birth": "1955-01-01 00:00",
-        "id": 2
       }
     ]
   }
